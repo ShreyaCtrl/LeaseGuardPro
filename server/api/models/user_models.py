@@ -1,4 +1,4 @@
-from app import mongo
+from api import mongo
 
 class User:
     def __init__(self, username, email):
@@ -13,5 +13,5 @@ class User:
 
     @staticmethod
     def get_all():
-        return list(mongo.db.users.find())
-
+        users = mongo.db.users.find()
+        return [user for user in users]

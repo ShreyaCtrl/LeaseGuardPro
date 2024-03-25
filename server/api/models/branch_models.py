@@ -1,4 +1,4 @@
-from app import mongo
+from api import mongo
 
 class Branch:
     def __init__(self, name, location):
@@ -13,4 +13,5 @@ class Branch:
 
     @staticmethod
     def get_all():
-        return list(mongo.db.branches.find())
+        branches = mongo.db.branches.find()
+        return [branch for branch in branches]
