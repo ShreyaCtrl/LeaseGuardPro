@@ -1,3 +1,0 @@
-FlaskFlask-PyMongo
-Flask
-python-dotenv
